@@ -27,16 +27,16 @@ export default function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <div className="flex h-screen bg-gray-900 text-white">
+    <div className="flex min-h-screen bg-white">
       {/* Sidebar */}
-      <div className="w-64 flex flex-col bg-gray-900 border-r border-gray-800">
+      <div className="w-64 flex flex-col bg-white border-r border-gray-200 sticky top-0 h-screen">
         {/* Logo */}
-        <div className="flex items-center px-6 py-6 border-b border-gray-800">
+        <div className="flex items-center px-6 py-6 border-b border-gray-200">
           <div className="relative">
-            <div className="w-8 h-8 border-3 border-white rounded-full"></div>
-            <div className="absolute top-4 left-4 w-3 h-1 bg-white transform rotate-45 origin-left"></div>
+            <div className="w-8 h-8 border-3 border-black rounded-full"></div>
+            <div className="absolute top-4 left-4 w-3 h-1 bg-black transform rotate-45 origin-left"></div>
           </div>
-          <span className="ml-2 text-xl font-bold">DialIQ</span>
+          <span className="ml-2 text-xl font-bold text-black">DialIQ</span>
         </div>
 
         {/* Main Navigation */}
@@ -49,8 +49,8 @@ export default function Sidebar() {
                 href={item.href}
                 className={`flex items-center px-4 py-3 rounded-lg transition-colors ${
                   isActive
-                    ? 'bg-gray-800 text-white'
-                    : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                    ? 'bg-gray-100 text-black'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-black'
                 }`}
               >
                 <item.icon className="w-5 h-5 mr-3" />
@@ -62,7 +62,7 @@ export default function Sidebar() {
         </nav>
 
         {/* Separator */}
-        <div className="border-t border-gray-800"></div>
+        <div className="border-t border-gray-200"></div>
 
         {/* Bottom Navigation */}
         <nav className="px-4 py-4">
@@ -74,8 +74,8 @@ export default function Sidebar() {
                 href={item.href}
                 className={`flex items-center px-4 py-3 rounded-lg transition-colors ${
                   isActive
-                    ? 'bg-gray-800 text-white'
-                    : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                    ? 'bg-gray-100 text-black'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-black'
                 }`}
               >
                 <item.icon className="w-5 h-5 mr-3" />
@@ -86,14 +86,14 @@ export default function Sidebar() {
         </nav>
 
         {/* User Profile */}
-        <div className="border-t border-gray-800 p-4">
+        <div className="border-t border-gray-200 p-4">
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-              <User className="w-4 h-4" />
+            <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+              <User className="w-4 h-4 text-gray-600" />
             </div>
             <div className="ml-3">
-              <p className="text-sm font-medium">John Doe</p>
-              <p className="text-xs text-gray-400">Admin</p>
+              <p className="text-sm font-medium text-black">John Doe</p>
+              <p className="text-xs text-gray-500">Admin</p>
             </div>
           </div>
         </div>
